@@ -57,7 +57,7 @@ public class EEGModel {
 	 */
 	public EEGModel(Measurement[] measurements) {
 		// TODO
-		for (Measurement measurement : measurements ) {
+		for (Measurement measurement : measurements) {
 			this.measurements.add(measurement);
 		}	
 	}
@@ -92,7 +92,10 @@ public class EEGModel {
 	 */
 	public EEGModel filter(Filter filter) {
 		// TODO
-		
+		if (filter != null) {
+			
+		return filter.applyFilter(this);
+		}
 		
 		return null;
 	}
